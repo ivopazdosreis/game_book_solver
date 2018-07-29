@@ -1,0 +1,39 @@
+digraph G{
+
+subgraph clusterBalthus {
+node [style=filled,color=white];
+style=filled;
+color=lightgrey;
+299 -> 249 -> 236 -> 114 -> 40;
+299 -> 197 -> 236;
+299 -> 152 -> 236;
+114 -> 77 -> 40;
+236 [label="236\nbattle" shape=doubleoctagon color=darkorange];
+label = "Balthus";
+}
+
+
+subgraph clusterDiabolus {
+node [style=filled,color=white];
+style=filled;
+color=lightgrey;
+13 -> 372 -> 168 -> 124 -> 382;
+13 -> 107 -> 168;
+168 -> 382;
+372 [label="372\nST+2"];
+168 [label="168\nF+2"];
+124 [label="124\nF+2"];
+label = "Diabolus";
+}
+
+"1" -> {"357";"275";"289"}
+
+subgraph clusterLegend {
+node [style=filled,color=white];
+style=filled;
+color=lightgrey;
+Battle [label="[n]\n[adversary]" shape=doubleoctagon color=darkorange];
+label = "Legend";
+}
+
+}

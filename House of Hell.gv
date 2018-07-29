@@ -1,0 +1,71 @@
+digraph G {
+subgraph clusterBalthus {
+node [style=filled,color=white];
+style=filled;
+color=lightgrey;
+299 -> 249 -> 236 -> 114 -> 40;
+299 -> 197 -> 236;
+299 -> 152 -> 236;
+114 -> 77 -> 40;
+152 [label="152\nF+1"];
+236 [label="236\nZOMBIE\nST-2\nF+2" shape=doubleoctagon color=darkorange];
+77 [label="152\nF+1"];
+40 [label="40\nKey"];
+label = "Balthus";
+}
+
+subgraph clusterDiabolus {
+node [style=filled,color=white];
+style=filled;
+color=lightgrey;
+13 -> 372 -> 168 -> 124 -> 382;
+13 -> 107 -> 168;
+168 -> 382;
+372 [label="372\nST+2"];
+168 [label="168\nF+2"];
+124 [label="124\nF+2"];
+label = "Diabolus";
+}
+
+subgraph clusterTuttivilus {
+node [style=filled,color=white];
+style=filled;
+color=lightgrey;
+155 -> 231;
+231 -> 348 [label="SC+"];
+348 -> 121 -> 175;
+155 -> 27 -> 121;
+231 -> 171 [label="SC-"]
+231 [label="231\nF+2"];
+27 [label="27\nF+3"];
+171 [shape=circle color=violetred]
+label = "Tuttivilus";
+}
+
+subgraph clusterMephisto {
+node [style=filled,color=white];
+style=filled;
+color=lightgrey;
+298 -> 390 -> 287;
+298 -> 287;
+390 [label="390\nFrayed Rope"];
+label = "Mephisto";
+}
+
+1 -> {357;275;289}
+289 -> {345;137;}
+137 -> {357;275;345}
+
+
+40 -> 86 -> 13;
+
+subgraph clusterLegend {
+node [style=filled,color=white];
+style=filled;
+color=lightgrey;
+Battle [label="Battle" shape=doubleoctagon color=darkorange];
+Death [label="Death" shape=circle color=violetred]
+label = "Legend";
+}
+
+}
