@@ -1,0 +1,87 @@
+digraph G {
+compound=true;
+
+subgraph clusterCommonwealth {
+node [style=filled,fillcolor=white];
+bgcolor=darkgreen;
+
+subgraph clusterS015 {S015}
+
+subgraph clusterS016S067A017 {S016;A017;S067;}
+
+S014 -> S015
+S014 -> S134
+S014 -> S016[lhead=clusterS016S067A017]
+
+S015->S018[lhead=clusterS018]
+S015->S019[lhead=clusterS019]
+
+subgraph clusterS018 {S018;}
+subgraph clusterS024 {S024}
+subgraph clusterS021A022S125 {S021;A022;S125;}
+
+S018 -> S024
+S018 -> S130
+S018 -> S021[lhead=clusterS021A022S125]
+
+
+subgraph clusterS019 {S019;}
+subgraph clusterS023 {S023}
+subgraph clusterS021A022 {S021;A022}
+
+
+S019 -> S021[lhead=clusterS021A022]
+S019 -> S023
+S019->S150
+
+S015->S067
+
+subgraph clusterS094 {S094}
+subgraph clusterS020 {S020}
+S016 -> S019[lhead=clusterS019]
+S016 -> S094[lhead=clusterS094]
+S016 -> S020
+S016 -> S134
+
+subgraph clusterFleshAndBone{
+bgcolor=deepskyblue;
+S134
+subgraph clusterS134A135 {S134;A135}
+S137
+S136
+S138
+S139
+S140[fillcolor=green]
+S134->S137
+S134->S136 -> S137 -> {S138;S139}
+S138->S140
+S139->S140
+label = "Flesh and Bone";
+}
+
+subgraph clusterGoodNewsEveryone{
+bgcolor=deepskyblue;
+S130
+S130->S131
+S130->S132
+S130->S133
+S131[fillcolor=green]
+S132[fillcolor=green]
+S133[fillcolor=green]
+label = "Good News, Everyone!";
+}
+
+label = "Commonwealth";
+}
+
+subgraph clusterRandomEncounters {
+node [style=filled,fillcolor=white];
+bgcolor=beige;
+{A002;A004;A005;A008;A012}
+A005 -> A006;
+label = "Random Encounters";
+}
+
+label = "Fallout Board Game";
+
+}
